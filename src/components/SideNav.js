@@ -21,7 +21,7 @@ const SideNav =()=>{
           <h5>+52 984 190 3174</h5>
         </div>
         <a href={cv} target="_blank" className="info__cv">Get Resume</a>
-        <a href={cv} target="_blank" className="info__cv">Source Code</a>
+        <a href="https://github.com/kuruazul/portfolio" target="_blank" className="info__cv">Source Code</a>
       </aside>
       <ul className="sidenav__list">
         <li className={`sidenav__item ${ frag==="#header-resume" ? "active" : ""}`}>
