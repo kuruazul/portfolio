@@ -1,0 +1,143 @@
+#header-resume{
+  padding: 20px 16px;
+  background-image: url("../images/background.jpg");
+  box-shadow: 0 0 20px 5px rgb(3, 104, 199);
+
+  @include md{
+    padding: 20px 32px;
+  }
+}
+
+.hero__content{ 
+  margin: 0 auto;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 20px 5px rgb(3, 104, 199);
+  gap: 16px;
+  background: linear-gradient(-45deg,turquoise,rgb(62, 91, 255),rgb(214, 12, 214), rgb(255, 66, 66), rgb(243, 177, 54)); 
+  background-size: 1000% 1000%;
+  animation: heroanimationmobile 0.8s ease-in-out forwards, herocontentanim 16s ease infinite 2s;
+
+  
+  @include md{
+    gap: 32px;
+    animation: heroanimation 0.8s ease-in-out forwards, herocontentanim 16s ease infinite 2s;
+  }
+}
+
+.hero__container{
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.hero__image-container{
+  width: 100px;
+    height: 100px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include md {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.hero__text{
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  align-items: start;
+  opacity: 0;
+  transition: display 0.5s;
+
+  h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+  }
+
+  span{
+    margin: 0;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+
+  &.display{
+    display: flex;
+    opacity: 1;
+  }
+
+  @include md{
+    h1{
+      font-size: 36px;
+    }
+
+    span{
+      font-size: 25px;
+    }
+  }
+}
+
+.hero__rol{
+  max-width: max-content;
+  color: rgb(255, 255, 255);
+  overflow: hidden; 
+  border-right: .15em solid rgb(0, 47, 255); 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: 0; 
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
+
+@keyframes heroanimation {
+  0%{
+    max-width: 350px;
+  }
+  100%{
+    max-width: 100%;
+  }
+}
+
+@keyframes heroanimationmobile {
+  0%{
+    max-width: 100px;
+  }
+  100%{
+    max-width: 100%;
+  }
+}
+
+@keyframes herocontentanim {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}

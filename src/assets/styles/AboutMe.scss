@@ -1,0 +1,90 @@
+.aboutme-container{
+  background-color: white;
+  border-radius: 8px;  
+  max-width: 990px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px 5px rgb(3, 104, 199);
+}
+
+.aboutme__content{
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+  @include md{
+    display: flex;
+  } 
+}
+
+.aboutme__list{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  list-style: none;
+  @include md{
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.aboutme__list-item{
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #454545;
+  color: #fff;
+
+  &.active{
+    outline: 2px solid #229cd4;
+    background-color: #3ebefa;
+  }
+}
+
+.aboutme__info{
+  
+  max-width: 100%;
+  background-color: #3ebefa; 
+  border-radius: 8px;
+  padding: 16px;
+  color: #fff;
+  @include md{
+    width: 100%;
+    max-width: calc(100% - 200px);
+  }
+}
+
+.aboutme__info{
+  display: flex;
+  align-items: center;
+}
+
+.hobbits__list{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+
+.hobbit__item{
+  padding: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  background-color: #b3e7ff;
+  img{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.brief-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  p:hover{
+    color: #454545;
+  }
+}

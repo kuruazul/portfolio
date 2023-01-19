@@ -1,0 +1,47 @@
+@import "assets/styles/mixins.scss";
+@import "assets/styles/SideNav.scss";
+@import "assets/styles/Hero.scss";
+@import "assets/styles/Experience.scss";
+@import "assets/styles/Skills.scss";
+@import "assets/styles/SoftSkills.scss";
+@import "assets/styles/AboutMe.scss";
+
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.App{
+  height: 100vh;
+  position: relative;
+}
+
+.section-title{
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: aqua;
+  text-transform: capitalize  ;
+  @include sm{
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+body{
+  background-color: rgb(0, 25, 167);
+  background: linear-gradient(90deg,rgb(1, 18, 117) 5%, rgb(0, 5, 34) ,rgb(1, 18, 117) 95%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section{
+  padding: 0 16px;
+
+  &:last-of-type{
+    padding-bottom: 30px;
+  }
+}
